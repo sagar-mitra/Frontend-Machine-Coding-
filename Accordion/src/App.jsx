@@ -3,7 +3,10 @@ import FAQList from "./components/FAQList";
 import { useEffect } from "react";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("theme");
+     return savedTheme ? JSON.parse(savedTheme) : false;
+  });
 
   // useEffect runs whenever `darkMode` changes
   useEffect(() => {
@@ -13,6 +16,8 @@ const App = () => {
     } else {
       document.documentElement.classList.remove("dark");
     }
+    // save the theme to the local storage
+    localStorage.setItem("theme" , JSON.stringify(darkMode))
   }, [darkMode]);
 
   // Toggle function to switch between light and dark modes

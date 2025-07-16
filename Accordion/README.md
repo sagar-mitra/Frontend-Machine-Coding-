@@ -38,3 +38,6 @@
 - The effect runs whenever `darkMode` changes.
 
 - Use the code in `App.jsx`
+
+### Accordion
+- Inside a button keep the questions and the icon(like plus and minus to showcase is it open or not)

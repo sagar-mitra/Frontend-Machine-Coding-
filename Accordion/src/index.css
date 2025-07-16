@@ -4,4 +4,14 @@
   font-family: "Prompt", sans-serif;
 }
 
-@custom-variant dark (&:where(.dark, .dark *))
+/* Remove the scrollbar  */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none; /* Hides scrollbar in Internet Explorer 10+ and older Edge Browser */
+  scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
