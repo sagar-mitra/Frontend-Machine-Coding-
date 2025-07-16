@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
-* {
-  font-family: "Prompt", sans-serif;
+
+:root {
+  --font-inter: "Inter", sans-serif;
+  --font-prompt: "Prompt", sans-serif
 }
+
+/* * {
+  font-family: "Prompt", sans-serif;
+} */
 
 /* Remove the scrollbar  */
 html::-webkit-scrollbar {
