@@ -6,6 +6,7 @@ import PasswordStrength from "./components/PasswordStrength";
 
 const App = () => {
   const [passLength, setPassLength] = useState(4);
+  const [copied, setCopied] = useState(false)
 
   const [checkboxData, setCheckBoxData] = useState([
     { title: "Include Uppercase Letters", state: false },
@@ -23,6 +24,11 @@ const App = () => {
   // Handle Copy Button
   const handleCopy = () => {
     navigator.clipboard.writeText(password);
+    setCopied(true)
+
+    setTimeout(() => {
+      setCopied(false)
+    }, 1000)
   };
 
   const { password, errorMessage, generatePassword } = usePasswordGenerator();
@@ -40,7 +46,7 @@ const App = () => {
         {/* Generate Password Box  */}
         <div className="password-box">
           <h2>{password}</h2>
-          <FaCopy onClick={handleCopy} />
+          <p>{copied ? "Copied" : <FaCopy onClick={handleCopy} />}</p>
         </div>
 
         {/* Lower Part  */}
@@ -48,10 +54,11 @@ const App = () => {
           {/* Character Length  */}
           <div className="character-length-box">
             <span className="flex">
-              <label>Character Length</label>
-              <label>{passLength}</label>
+              <label className="pass-length-text">Character Length</label>
+              <label className="pass-length">{passLength}</label>
             </span>
             <input
+            className="slider"
               type="range"
               max={16}
               min={4}
