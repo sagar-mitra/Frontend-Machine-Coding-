@@ -18,18 +18,20 @@ body {
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
+  position: relative;
 }
 
 .box {
-  /* border: 1px solid green; */
   padding: 10px 10px;
+  border: 1px solid red;
+  width: 340px;
+  height: 440px;
 }
 
 .heading h1 {
@@ -46,27 +48,29 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 20px;
-  /* border: 1px solid white; */
   background-color: var(--card-color);
   margin-bottom: 15px;
 }
 
 .password-box h2 {
-  font-size: 1.3rem;
-  letter-spacing: 1.5px;
+  font-size: 1.05rem;
+  letter-spacing: 1.3px;
 }
-
 
 .lower-part {
   background-color: var(--card-color);
   padding: 10px 20px;
+  border: 1px solid green;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .character-length-box {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  margin-bottom: 15px;
 }
 
 .flex {
@@ -76,10 +80,11 @@ body {
 }
 
 .options-box {
+  font-size: 0.9rem;
+  opacity: 90%;
   display: flex;
   flex-direction: column;
   gap: 2px;
-  margin-bottom: 15px;
 }
 
 .options-box input {
@@ -92,7 +97,6 @@ body {
   justify-content: space-between;
   padding: 10px 15px;
   background-color: #121212;
-  margin-bottom: 15px;
 }
 
 .strength-box h3 {
@@ -105,7 +109,6 @@ body {
   font-size: 0.7rem;
   text-align: center;
   color: rgba(246, 27, 27, 0.954);
-  margin-bottom: 15px;
 }
 
 .generate-btn {
@@ -116,4 +119,125 @@ body {
   letter-spacing: 0.5px;
   background-color: var(--secondary-color);
   border: none;
+}
+
+.credit {
+  font-size: 0.6rem;
+  margin-top: 30px;
+  opacity: 50%;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+}
+
+@media screen and (max-width: 360px) {
+  .box {
+    width: 310px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .box {
+    width: 500px;
+    height: 600px;
+    padding: 10px 10px;
+  }
+
+  .heading h1 {
+    font-size: 1.2rem;
+  }
+
+  .password-box {
+    padding: 20px 20px;
+  }
+
+  .password-box h2 {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+
+  .lower-part {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 20px;
+  }
+
+  .options-box {
+    gap: 8px;
+    font-size: 1.3rem;
+  }
+
+  .options-box input {
+    margin-right: 10px;
+  }
+
+  .strength-box {
+    padding: 15px 15px;
+    background-color: #121212;
+  }
+
+  .strength-box h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.9px;
+  }
+
+  .errorMessage {
+    font-size: 0.9rem;
+    text-align: center;
+    color: rgba(246, 27, 27, 0.954);
+  }
+
+  .generate-btn {
+    padding: 13px 0;
+    font-size: 0.8rem;
+    font-weight: 550;
+    letter-spacing: 0.5px;
+  }
+
+  .credit {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .box {
+    width: 600px;
+    height: 520px;
+    padding: 10px 10px;
+  }
+
+  .password-box {
+    padding: 30px 20px;
+  }
+
+  .password-box h2 {
+    font-size: 1.3rem;
+    letter-spacing: 1.5px;
+  }
+
+  .lower-part {
+    height: 375px;
+  }
+
+  .options-box {
+    font-size: 1.1rem;
+  }
+
+  .strength-box h3 {
+    font-size: 0.8rem;
+    letter-spacing: 0.9px;
+  }
+
+  .generate-btn {
+    padding: 15px 0;
+    cursor: pointer;
+  }
+
+  .credit {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    opacity: 50%;
+  }
 }
