@@ -2,8 +2,9 @@ import React from "react";
 
 const Checkbox = ({ item, index, handleCheckBox }) => {
   return (
-    <div>
+    <div className="option">
       <input
+        className="check-box"
         type="checkbox"
         checked={item.state}
         onChange={() => handleCheckBox(index)}
