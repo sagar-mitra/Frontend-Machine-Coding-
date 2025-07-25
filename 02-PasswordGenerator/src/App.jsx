@@ -6,7 +6,7 @@ import PasswordStrength from "./components/PasswordStrength";
 
 const App = () => {
   const [passLength, setPassLength] = useState(4);
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState(false);
 
   const [checkboxData, setCheckBoxData] = useState([
     { title: "Include Uppercase Letters", state: false },
@@ -23,17 +23,17 @@ const App = () => {
 
   // Handle Copy Button
   const handleCopy = () => {
-    navigator.clipboard.writeText(password);
-    setCopied(true)
+    if (password) {
+      navigator.clipboard.writeText(password);
+      setCopied(true);
+    }
 
     setTimeout(() => {
-      setCopied(false)
-    }, 1000)
+      setCopied(false);
+    }, 1300);
   };
 
   const { password, errorMessage, generatePassword } = usePasswordGenerator();
-
-
 
   return (
     <div className="container">
@@ -46,7 +46,13 @@ const App = () => {
         {/* Generate Password Box  */}
         <div className="password-box">
           <h2>{password}</h2>
-          <p>{copied ? "Copied" : <FaCopy onClick={handleCopy} />}</p>
+          {copied ? (
+            <p>copied</p>
+          ) : (
+            <span className="copy-btn">
+              <FaCopy onClick={handleCopy} />
+            </span>
+          )}
         </div>
 
         {/* Lower Part  */}
@@ -58,10 +64,11 @@ const App = () => {
               <label className="pass-length">{passLength}</label>
             </span>
             <input
-            className="slider"
+              className="slider"
               type="range"
               max={16}
               min={4}
+              value={passLength}
               onChange={(e) => setPassLength(e.target.value)}
             />
           </div>
@@ -81,7 +88,7 @@ const App = () => {
           </div>
 
           {/* Strength Box  */}
-          <PasswordStrength password={password}/>
+          <PasswordStrength password={password} />
 
           {/* Error Message */}
           {errorMessage && <div className="errorMessage">{errorMessage}</div>}
@@ -94,9 +101,7 @@ const App = () => {
           </button>
         </div>
       </div>
-      <div className="credit">
-            Developed By Sagar
-      </div>
+      <div className="credit">Developed By Sagar</div>
     </div>
   );
 };

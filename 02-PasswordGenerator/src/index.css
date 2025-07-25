@@ -29,7 +29,6 @@ body {
 
 .box {
   padding: 10px 10px;
-  border: 1px solid red;
   width: 340px;
   height: 440px;
 }
@@ -57,14 +56,25 @@ body {
   letter-spacing: 1.3px;
 }
 
- .password-box p {
-    font-size: 0.8rem;
-  }
+.password-box p {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+}
+
+.copy-btn {
+  font-size: 0.8rem;
+  transform: all 0.5s linear;
+}
+
+.copy-btn:hover {
+  color: var(--secondary-color);
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
 .lower-part {
   background-color: var(--card-color);
   padding: 10px 20px;
-  border: 1px solid green;
   height: 310px;
   display: flex;
   flex-direction: column;
@@ -90,12 +100,14 @@ body {
   accent-color: var(--secondary-color);
 }
 
-.slider:hover {
+.slider:active {
   accent-color: var(--secondary-color);
 }
 
-.slider:focus {
+.slider:hover {
   accent-color: var(--secondary-color);
+  border: none;
+  outline: none;
 }
 
 .flex {
@@ -108,6 +120,7 @@ body {
   font-size: 0.7rem;
   opacity: 90%;
   display: flex;
+  letter-spacing: -0.4px;
   flex-direction: column;
   gap: 2px;
 }
@@ -145,9 +158,14 @@ body {
 }
 
 .strength-box h3 {
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   letter-spacing: 0.8px;
   opacity: 0.6;
+}
+
+.strength-box p {
+  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
 .errorMessage {
@@ -164,6 +182,16 @@ body {
   letter-spacing: 0.5px;
   background-color: var(--secondary-color);
   border: none;
+  transition: all 0.5s linear;
+}
+
+.generate-btn:hover {
+  cursor: pointer;
+  /* transform: scale(0.98); */
+}
+
+.generate-btn:active{
+  transform: scale(0.9);
 }
 
 .credit {
@@ -201,7 +229,11 @@ body {
     letter-spacing: 1.5px;
   }
 
-   .password-box p {
+  .password-box p {
+    font-size: 0.9rem;
+  }
+
+  .copy-btn {
     font-size: 0.9rem;
   }
 
@@ -242,6 +274,10 @@ body {
     letter-spacing: 0.9px;
   }
 
+  .strength-box p {
+    font-size: 1rem;
+  }
+
   .errorMessage {
     font-size: 0.9rem;
     text-align: center;
@@ -276,9 +312,13 @@ body {
     letter-spacing: 1.5px;
   }
 
-    .password-box p {
-      font-size: 1.1rem;
-    }
+  .password-box p {
+    font-size: 1.1rem;
+  }
+
+  .copy-btn {
+    font-size: 1.1rem;
+  }
 
   .lower-part {
     height: 375px;
@@ -305,6 +345,11 @@ body {
   .strength-box h3 {
     font-size: 0.8rem;
     letter-spacing: 0.9px;
+  }
+
+  .strength-box p {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
   }
 
   .generate-btn {
