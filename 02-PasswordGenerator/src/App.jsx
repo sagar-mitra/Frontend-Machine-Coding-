@@ -10,9 +10,9 @@ const App = () => {
 
   const [checkboxData, setCheckBoxData] = useState([
     { title: "Include Uppercase Letters", state: false },
-    { title: "Include lowercase letters", state: false },
-    { title: "Include numbers", state: false },
-    { title: "Include symbols", state: false },
+    { title: "Include Lowercase Letters", state: false },
+    { title: "Include Numbers", state: false },
+    { title: "Include Symbols", state: false },
   ]);
 
   const handleCheckBox = (index) => {

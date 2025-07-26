@@ -22,15 +22,15 @@ const usePasswordGenerator = () => {
           charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
           break;
 
-        case "Include lowercase letters":
+        case "Include Lowercase Letters":
           charset += "abcdefghijklmnopqrstuvwxyz";
           break;
 
-        case "Include numbers":
+        case "Include Numbers":
           charset += "0123456789";
           break;
 
-        case "Include symbols":
+        case "Include Symbols":
           charset += "!@#$%^&*()_+-=[]{}|;:,.<>?";
           break;
       }

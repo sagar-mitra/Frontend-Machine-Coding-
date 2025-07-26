@@ -30,7 +30,12 @@ body {
 .box {
   padding: 10px 10px;
   width: 340px;
-  height: 440px;
+  height: 445px;
+}
+
+.box::selection{
+  background-color: var(--secondary-color);
+  color: var(--card-color);
 }
 
 .heading h1 {
@@ -74,8 +79,8 @@ body {
 
 .lower-part {
   background-color: var(--card-color);
-  padding: 10px 20px;
-  height: 310px;
+  padding: 20px 20px;
+  height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -117,7 +122,7 @@ body {
 }
 
 .options-box {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   opacity: 90%;
   display: flex;
   letter-spacing: -0.4px;
@@ -131,12 +136,7 @@ body {
 }
 
 .check-box {
-  background-color: white;
-  appearance: none;
-  -webkit-appearance: none;
-  height: 10px;
-  width: 10px;
-  border-radius: 2px;
+  accent-color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -187,7 +187,6 @@ body {
 
 .generate-btn:hover {
   cursor: pointer;
-  /* transform: scale(0.98); */
 }
 
 .generate-btn:active{
@@ -247,7 +246,7 @@ body {
 
   .options-box {
     gap: 8px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .pass-length-text {
