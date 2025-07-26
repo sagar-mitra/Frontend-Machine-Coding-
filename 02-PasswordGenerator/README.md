@@ -1,7 +1,3 @@
-
-md
-Copy
-Edit
 # <div align="center">🔐 Password Generator</div>
 
 A modern and responsive **Password Generator App** built using **React** and **Tailwind CSS**.  
@@ -31,9 +27,9 @@ Create strong, customizable passwords instantly — with live strength feedback 
 
 ## ⚙️ Tech Stack
 
-- **React** – component-based architecture  
+- **React** – component architecture  
 - **Tailwind CSS** – for clean, modern styling  
-- **JavaScript** – password generation logic    
+- **Vite** – fast development and build tool    
 - **Vercel** – for live deployment
 
 ---
