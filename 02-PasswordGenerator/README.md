@@ -28,7 +28,7 @@ Create strong, customizable passwords instantly — with live strength feedback 
 ## ⚙️ Tech Stack
 
 - **React** – component architecture  
-- **Tailwind CSS** – for clean, modern styling  
+- **Vanilla CSS** – for clean, modern styling  
 - **Vite** – fast development and build tool    
 - **Vercel** – for live deployment
 
