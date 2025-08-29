@@ -1,12 +1,26 @@
-# React + Vite
+<h1 align="center">🔐 React OTP Input </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React OTP Input that lets users enter one-time passwords or verification codes.
+It automatically moves to the next box when typing, handles backspace to clear values properly, and supports arrow key navigation.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Configurable length → Default is 6 digits, but you can set any length using otpLength prop.
 
-## Expanding the ESLint configuration
+- Auto-focus navigation →
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    - Typing a digit moves to the next input.
+
+    - Arrow keys (←, →) move between boxes.
+
+- Backspace handling →
+
+    - Clears current box if it has a value.
+
+    - If current box is empty, it clears the previous box and moves focus left.
+
+- Auto-focus first input on component mount.
+
+- Restricts one digit per box (maxLength={1}).
+
+- Fully controlled state (otpFields) → OTP value is always available.
