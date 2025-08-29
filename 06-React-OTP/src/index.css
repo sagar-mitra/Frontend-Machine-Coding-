@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #242424;
+  color: #ffff;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 5px;
+  margin: 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+input:focus{
+  outline: 2px solid #1E90FF;
+}
+
+p {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  opacity: 80%;
+}
